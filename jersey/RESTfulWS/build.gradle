@@ -1,0 +1,68 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+//webAppDirName =  '/src/main/webapp'
+
+war {
+	baseName = 'RESTfulWS'
+}
+
+
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+
+dependencies {
+	compile 'com.sun.jersey:jersey-bundle:1.18.1'
+	testCompile 'junit:junit'
+}
+
+
+eclipse {
+	wtp {
+		facet {
+			facet name: 'jst.web', version: '3.0'
+			facet name: 'java', version: '1.8'
+			facet name: 'wst.jsdt.web', version: '1.0'
+		}
+		component {
+			resource deployPath: '/', 					sourcePath: '/src/main/webapp'
+			resource deployPath: '/WEB-INF/classes', 	sourcePath: '/src/main/java'
+		  }
+	}
+}
+//
+//sourceSets {
+//	main {
+//		java {
+//			srcDirs "src/main/java"
+//		}
+//
+////		resources {
+////			srcDirs "src/main/webapp"
+////		}
+//		
+//	}
+//
+//}
+
+
+//
+//eclipse.classpath.file {
+//	whenMerged { classpath ->
+//		classpath.entries.findAll { entry -> entry.kind == 'lib' }*.exported = false
+//	}
+//}
+//
+//
+//uploadArchives {
+//	repositories {
+//	   flatDir {
+//		   dirs 'repos'
+//	   }
+//	}
+//}
