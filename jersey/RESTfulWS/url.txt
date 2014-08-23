@@ -1,1 +1,0 @@
-﻿http://java.dzone.com/articles/restful-web-services-java
