@@ -6,7 +6,7 @@ import com.sun.net.httpserver.HttpServer;
  
 public class CalcRESTStartUp {
  
-    static final String BASE_URI = "http://localhost:9999/calcrest/";
+    static final String BASE_URI = "http://localhost:8080/CalcREST/";
  
     public static void main(String[] args) {
         try {

@@ -8,7 +8,7 @@ import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
  
 public class CalcRESTClient {
-    static final String REST_URI = "http://localhost:9999/calcrest";
+    static final String REST_URI = "http://localhost:8080/CalcREST";
     static final String ADD_PATH = "calc/add";
     static final String SUB_PATH = "calc/sub";
     
