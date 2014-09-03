@@ -9,9 +9,9 @@
 
   <s:form action="resultAction">
   
- <sx:datetimepicker label="Select From" name="toDate" displayFormat="MM-dd-yy" />
- <sx:datetimepicker label="Select To" name="fromDate" displayFormat="MM-dd-yy" />
- <sx:datetimepicker label="Select Other" name="otherDate" displayFormat="MM-dd-yy"  />
+ <sx:datetimepicker label="Select From" name="toDate" displayFormat="MM-dd-yy" value="%{'today'}" />
+ <sx:datetimepicker label="Select To" name="fromDate" displayFormat="MM-dd-yy" value="%{'10-01-01'}" />
+ <sx:datetimepicker label="Select Other" name="otherDate" displayFormat="MM-dd-yy"    />
  
  <s:submit value="Click" align="center" /> 
  
