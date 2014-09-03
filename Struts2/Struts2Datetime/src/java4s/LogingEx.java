@@ -1,8 +1,8 @@
 package java4s;
 import java.util.Date;
 
-import com.opensymphony.xwork2.ActionSupport;
-public class LogingEx extends ActionSupport{		
+
+public class LogingEx {		
 	private static final long serialVersionUID = 1L;
 	
 	private Date toDate;
