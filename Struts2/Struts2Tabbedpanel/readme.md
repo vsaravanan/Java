@@ -6,8 +6,6 @@ courtesy : http://struts.apache.org/release/2.2.x/docs/ajax-and-javascript-recip
 
 Test site : http://saravan.asuscomm.com/Struts2Tabbedpanel/
 
-It is working nicely in IE but not working in goggle chrome. strange.
-
 	o	Fixed size (size does not adjust to current tab)
 	o	Do not load tab 2 when page loads (it will be loaded when selected)
 	o	Reload tabs content when selected
