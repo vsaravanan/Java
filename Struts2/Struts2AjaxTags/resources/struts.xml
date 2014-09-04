@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.custom.i18n.resources" value="myapp" />
+	
+	<package name="default" extends="struts-default" >
+        <action name="ajaxtag" class="com.dineshonjava.struts2.action.FormTagAction">
+            <result name="success">/ajax.jsp</result>
+        </action>
+        <action name="count1" class="com.dineshonjava.struts2.action.FormTagAction" method="tab1">
+            <result name="success">/select.jsp</result>
+        </action>
+        <action name="count2" class="com.dineshonjava.struts2.action.FormTagAction" method="tab2">
+            <result name="success">/success.jsp</result>
+        </action>
+         <action name="count3" class="com.dineshonjava.struts2.action.FormTagAction" method="tab3">
+            <result name="success">/welcome.jsp</result>
+        </action>
+    </package>
+ </struts>
