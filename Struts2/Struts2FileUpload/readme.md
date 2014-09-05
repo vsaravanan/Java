@@ -2,6 +2,8 @@ Struts 2.3
 
 Struts2FileUpload
 
+<textarea rows="20" cols="80">
+<pre>
    <package name="upload" extends="struts-default">
       <action name="userImage" class="com.dineshonjava.struts2.action.upload.FileUploadAction">
 	  	  <interceptor-ref name="fileUpload">
@@ -16,7 +18,9 @@ Struts2FileUpload
 		   <result name="error">error.jsp</result>
 	</action>
    </package>
-   
+</pre>
+</textarea>
+
 courtesy : http://www.dineshonjava.com/2013/07/struts-2-file-upload-example.html
 
 Test site : http://saravan.asuscomm.com/Struts2FileUpload/

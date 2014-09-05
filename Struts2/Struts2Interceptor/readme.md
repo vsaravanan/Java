@@ -15,7 +15,7 @@ just simple html tags are used as below
       <input type="text" name="name"/>
       <input type="submit" value="Say Hello"/>
    </form>
-it is not uses with struts based html tags as below
+it is not used with struts based html tags as below
 	<s:form action="hello">
 		<s:label for="name" value="Please enter your name"/><br/>
 		<s:textfield key="Your Name" name="name"/>
