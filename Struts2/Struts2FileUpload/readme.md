@@ -2,7 +2,7 @@ Struts 2.3
 
 Struts2FileUpload
 
-
+<pre>
    &lt;package name="upload" extends="struts-default"&gt;
       &lt;action name="userImage" class="com.dineshonjava.struts2.action.upload.FileUploadAction"&gt;
 	  	  &lt;interceptor-ref name="fileUpload"&gt;
@@ -17,7 +17,7 @@ Struts2FileUpload
 		   &lt;result name="error"&gt;error.jsp&lt;/result&gt;
 	&lt;/action&gt;
    &lt;/package&gt;
-
+</pre>
 
 courtesy : http://www.dineshonjava.com/2013/07/struts-2-file-upload-example.html
 
