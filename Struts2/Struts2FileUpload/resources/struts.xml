@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+   <constant name="struts.devMode" value="true" />
+   <package name="upload" extends="struts-default">
+      <action name="userImage" class="com.dineshonjava.struts2.action.upload.FileUploadAction">
+	  	  <interceptor-ref name="fileUpload">
+	        <param name="maximumSize">2097152</param>
+	        <param name="allowedTypes">
+	            image/png,image/gif,image/jpeg,image/pjpeg
+	        </param>
+	      </interceptor-ref>
+	      <interceptor-ref name="defaultStack" />
+		  <result name="success">success.jsp</result>
+		  <result name="input">index.jsp</result>
+		   <result name="error">error.jsp</result>
+	</action>
+   </package>
+ </struts>
