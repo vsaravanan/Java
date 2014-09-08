@@ -37,9 +37,15 @@ public class MailAction extends ActionSupport {
 	   public String execute() 
 	   {
 	      String ret = SUCCESS;
+	      System.out.println("Struts2Mail entering...");
 	      try
 	      {
-	         Session session = Session.getDefaultInstance(properties,  
+			     System.out.println("from " + from);	         
+			     System.out.println("to " + to);	         
+			     System.out.println("subject " + subject);	         
+			     System.out.println("body " + body);	
+			     
+	    	  Session session = Session.getDefaultInstance(properties,  
 	            new javax.mail.Authenticator() {
 		            protected PasswordAuthentication 
 		            getPasswordAuthentication() {
@@ -54,10 +60,12 @@ public class MailAction extends ActionSupport {
 	         message.setSubject(subject);
 	         message.setText(body);
 	         Transport.send(message);
+	         System.out.println("Email should be sent successfully");
 	      }
 	      catch(Exception e)
 	      {
 	         ret = ERROR;
+	         System.out.println(e.toString());	         
 	         e.printStackTrace();
 	      }
 	      return ret;
