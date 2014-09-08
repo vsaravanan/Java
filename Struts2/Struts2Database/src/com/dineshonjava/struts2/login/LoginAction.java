@@ -25,7 +25,7 @@ public class LoginAction  extends ActionSupport{
 	      try {
 	         String URL = "jdbc:mysql://localhost:3306/test";
 	         Class.forName("com.mysql.jdbc.Driver");
-	         conn = DriverManager.getConnection(URL, "root", "rootpwd");
+	         conn = DriverManager.getConnection(URL, "user1", "pwd1");
 	         String sql = "SELECT UserName FROM users WHERE";
 	         sql+=" UserName = ? AND PASSWORD = ?";
 	         System.out.println(sql);
