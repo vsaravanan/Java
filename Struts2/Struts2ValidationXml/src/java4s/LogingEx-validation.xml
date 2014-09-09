@@ -3,26 +3,29 @@
   		"http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
 
 <validators>
-    <field name="uname"> 
+    <field name="name"> 
         <field-validator type="requiredstring">
-        	<message>User Name is required.</message>
+            <param name="trim">true</param>  
+            <message key="errors.required" />  
         </field-validator>
     </field>
     <field name="age">
+        <field-validator type="required">  
+            <message key="errors.required" />  
+        </field-validator>      
         <field-validator type="int">
             <param name="min">15</param>
             <param name="max">25</param>
-        	<message>Age must be ${min} - ${max}</message>       
+            <message key="errors.range"/>        
          </field-validator>        	
     </field>
-    <field name="mail">
-         <field-validator type="requiredstring">
-        	<message>email required</message>       
-         </field-validator>   
-     
-        <field-validator type="email">
-        	<message>enter valid email id</message>       
-         </field-validator>        	
+    <field name="email">
+        <field-validator type="requiredstring">  
+            <message key="errors.required" />  
+        </field-validator>  
+        <field-validator type="email">  
+            <message key="errors.invalid" />  
+        </field-validator>        	
     </field>
     <!-- how to test this model  
 	<validator type="email">

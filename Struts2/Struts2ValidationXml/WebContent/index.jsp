@@ -12,14 +12,14 @@
     
 <body>
 
-<s:actionerror />
-<s:form action="verify">
 
-	<s:textfield name="uname" label="Enter Username" required="true"/><br>
-	<s:textfield name="age" label="Enter Age" required="true"/><br>
-	<s:textfield name="mail" label="Enter Email id" required="true"/><br>
+<s:form  action="verify"   >
+
+	<s:textfield name="name" key="name" required="true"/><br>
+	<s:textfield name="age" key="age" required="true"/><br>
+	<s:textfield name="email" key="email" required="true"/><br>
      
-    <s:submit value="Click" align="center" /> 
+    <s:submit method="addEmployee" key="label.add.employee" align="center" /> 
 
 
 

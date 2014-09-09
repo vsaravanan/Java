@@ -1,26 +1,30 @@
 package java4s;
+import java.text.MessageFormat;
+
 import com.opensymphony.xwork2.ActionSupport;
 public class LogingEx extends ActionSupport{	
 	private static final long serialVersionUID = 1L;
 	
-	private String uname,mail;
-	private int age;
-
-	public String getUname() {
-		return uname;
-	}
-
-	public void setUname(String uname) {
-		this.uname = uname;
-	}
+	private String name,email;
 	
-	public String getMail() {
-		return mail;
+	private int age;
+	
+	public String getName() {
+		return name;
 	}
 
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setName(String name) {
+		this.name = name;
 	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 
 
 	public int getAge() {
@@ -31,13 +35,10 @@ public class LogingEx extends ActionSupport{
 		this.age = age;
 	}
 	
-	public String execute()
-	{		
-		
-			return SUCCESS;
-			
 
-	}
-	
+    public String addEmployee() {  
+
+        return SUCCESS;  
+    } 	
 	
 }
