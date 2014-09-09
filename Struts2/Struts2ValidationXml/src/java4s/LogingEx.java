@@ -37,7 +37,7 @@ public class LogingEx extends ActionSupport{
 	
 
     public String addEmployee() {  
-
+    	System.out.println("Struts2ValidationXml entered ...");
         return SUCCESS;  
     } 	
 	
