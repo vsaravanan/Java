@@ -1,7 +1,7 @@
 Spring21aMVCcar
 
 
-This spring example use no xml config. 
+This spring example uses no xml config. 
 But AppInitializer is required to generate web.xml dynamically.
 AppInitializer is required in weblogic, but not required in Tomcat.
  
