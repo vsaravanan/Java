@@ -31,19 +31,19 @@ public class MainController {
 	 * Retrieves all persons and allows them to be used as a model
 	 * @return a model attribute containing persons
 	 */
-	@ModelAttribute("persons")
+	@ModelAttribute("persons") // mvs to set the modelattribute with data
 	public List<Person> getAllPersons() {
 		logger.debug("Retrieving all persons and adding it to ModelAttribute");
 		
 		// Delegate to PersonService
-		return personService.getAll();
+		return personService.getAll(); // mvs return model
 	}
 	
 	/**
 	 * Retrieves all currency types
 	 * @return
 	 */
-	@ModelAttribute("currencies")
+	@ModelAttribute("currencies") // mvs to set the modelattribute with data
 	public List<String> getAllCurrencies() {
 		logger.debug("Retrieving all currencies and adding it to ModelAttribute");
 		
@@ -55,13 +55,13 @@ public class MainController {
 		currencies.add("Euro");
 		currencies.add("Dinar");
 		
-		return currencies;
+		return currencies; // mvs return model 
 	}
 	
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET) // mvs fetching url
     public String getAllUsingModelAttribute() {
     	logger.debug("Received request to show all persons page");	
-    	return "personspage";
+    	return "personspage"; // mvs return view name . model is not provided here. it is provided from modelattribute
 	}    	
 	
 	/**

@@ -31,10 +31,10 @@ public class AddressController {
 	 * Retrieves all addresses and allows them to be used as a model
 	 * @return a model attribute containing addresses
 	 */
-	@ModelAttribute("addresses")
+	@ModelAttribute("addresses") // mvs to set the modelattribute with data
 	public List<Address> getAllAddresses() {
 		// Delegate to service
-		return addressService.getAll();
+		return addressService.getAll(); // mvs return model 
 	}
 	
 	/**
@@ -43,7 +43,7 @@ public class AddressController {
 	 * 
 	 * @return the name of the JSP page
 	 */
-    @RequestMapping(value="list1", method = RequestMethod.GET)
+    @RequestMapping(value="list1", method = RequestMethod.GET) // mvs fetching url
     public String getAllUsingModelAttribute() {
     	logger.debug("Received request to show all addresses page");
      
@@ -52,7 +52,7 @@ public class AddressController {
     	// The name of the ModelAttribute is "addresses". Your JSP should reference "addresses"
     	
     	// This will resolve to /WEB-INF/jsp/addressespage.jsp
-    	return "addressespage";
+    	return "addressespage"; // mvs return view name . model is not provided here. it is provided from modelattribute
 	}
     
 	/**
@@ -61,8 +61,8 @@ public class AddressController {
 	 * 
 	 * @return the name of the JSP page
 	 */
-    @RequestMapping(value="list2", method = RequestMethod.GET)
-    public String getAllUsingModel(Model model) {
+    @RequestMapping(value="list2", method = RequestMethod.GET) // mvs fetching url
+    public String getAllUsingModel(Model model) { // mvs if u want to set the model then pass the model. otherwise no need
     	logger.debug("Received request to show all addresses page");
      
     	// Here we add the model manually
@@ -72,7 +72,7 @@ public class AddressController {
     	model.addAttribute("greetings", "I came from Model not ModelAttribute");
     	
     	// This will resolve to /WEB-INF/jsp/addressespage.jsp
-    	return "addressespage";
+    	return "addressespage";  // mvs return view name .
 	}
    
 }

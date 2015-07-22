@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
 import org.krams.tutorial.domain.Person;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.ModelAttribute;
+//import org.springframework.web.bind.annotation.ModelAttribute;
 
 /**
  * Service for processing Persons. 
