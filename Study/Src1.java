@@ -150,7 +150,7 @@ public class AlServiceFacadeImpl implements AlServiceFacade {
 	
 }
 
-aaddd
+aadddsss
 
 VPRB259-MarketingGroup.hbm.xml
 
